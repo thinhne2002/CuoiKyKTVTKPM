@@ -1,0 +1,32 @@
+version: '3'
+services:
+  user-service:
+    build:
+      context: ./user-service
+      dockerfile: Dockerfile
+    ports:
+      - "3001:3001"
+    networks:
+      - app-network
+
+  course-service:
+    build:
+      context: ./course-service
+      dockerfile: Dockerfile
+    ports:
+      - "3002:3002"
+    networks:
+      - app-network
+
+  registration-service:
+    build:
+      context: ./registration-service
+      dockerfile: Dockerfile
+    ports:
+      - "3003:3003"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

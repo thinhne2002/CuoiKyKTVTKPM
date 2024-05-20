@@ -1,0 +1,14 @@
+{
+  "name": "registration-service",
+  "version": "1.0.0",
+  "description": "Registration service for handling course registrations",
+  "main": "registrationService.js",
+  "scripts": {
+    "start": "node registrationService.js"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  }
+}
